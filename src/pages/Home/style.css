@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.imagem-aviao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dados-passagens{
+    display: flex;
+    width: 1188px;
+    height: 210px;
+    position: relative;
+    z-index: 99999;
+    bottom: 100px;
+    /* background-color: #ffff; */
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    flex-direction: column;
+}
+.idaevolta{
+    width: 145px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.economico{
+    width: 145px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.umpassageiro{
+    width: 158px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.origem{
+    width: 244px;
+    height: 43px;
+}
+.select{
+    display: flex;
+    flex-direction: row;
+}
+.label{
+    display: flex;
+    flex-direction: row;
+    
+}
+.label .ida{
+    width: 130px;
+
+}
+.label .volta{
+    width: 130px;
+}
+.ida .volta .{
+    width: 50px;
+}
