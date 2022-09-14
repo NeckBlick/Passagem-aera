@@ -1,0 +1,28 @@
+.header {
+  background-color: #4180ab;
+  padding: 1rem;
+  height: 80px;
+  align-items: center;
+}
+.login {
+  width: 10rem;
+  height: 2rem;
+  padding: 0;
+  background: #8db3cb;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.login-text{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 24px;
+  color: #ffffff;
+}
+.headerimg{
+    background-image: url(../../../public/assets/headerimg.png);
+    background-size: cover;
+}
