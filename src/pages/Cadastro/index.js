@@ -9,7 +9,7 @@ function Cadastro() {
     nome: "",
     nome_usuario: "",
     endereco_completo: "",
-    telefone: 0,
+    telefone: "",
     email: "",
     endereco_comercial: "",
     data_nascimento: "",
@@ -30,7 +30,7 @@ function Cadastro() {
   const cadUsuario = async (e) => {
     e.preventDefault();
     console.log(usuario.nome);
-    await fetch("http://localhost/api/cadastrar.php", {
+    await fetch("http://localhost:8080/api/cadastrar.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -56,12 +56,13 @@ function Cadastro() {
           });
         }
       });
+      
   };
   return (
     <>
       <Header />
       <div>
-        <div className="container-fluid headerimg"></div>
+        <div className="container-fluid headerimg"><img src="assets/headerimg.png" alt=""/></div>
         <div className="container mt-5">
           <h1 className="display-5">Cadastro</h1>
           <p className="fs-5">
@@ -77,10 +78,10 @@ function Cadastro() {
           </p>
         </div>
 
-        <form className="container" onSubmit={cadUsuario}>
+        <form  className="container" onSubmit={cadUsuario}>
           <div className="primeiro-dados">
             <div className="mb-5">
-              <input
+              <input  
                 type="text"
                 name="nome"
                 placeholder="Nome"
@@ -99,7 +100,7 @@ function Cadastro() {
             </div>
             <div className="mb-5">
               <input
-                type="text"
+                type="date"
                 name="data_nascimento"
                 placeholder="Data de nascimento"
                 className="input-config"
@@ -144,7 +145,7 @@ function Cadastro() {
             </div>
             <div className="mb-5">
               <input
-                type="text"
+                type="date"
                 name="data_emissao_rg"
                 placeholder="Data de emissão do RG"
                 className="input-config"
@@ -189,6 +190,8 @@ function Cadastro() {
           </div>
           <div className="celular">
             <h1 className="display-5 ">Número de celular</h1>
+            <div className="dados-login-input">
+
             <div className="mt-5">
               <input
                 type="tel"
@@ -199,6 +202,7 @@ function Cadastro() {
 
               />
             </div>
+            </div>
           </div>
           <div className="dados-login mt-5">
             <h1 className="display-5">Dados de login para sua conta</h1>
@@ -206,30 +210,30 @@ function Cadastro() {
               Dê preferência ao seu email pessoal para garantir que vai receber
               nossas comunicações.
             </p>
-            <div className="mb-4">
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="input-config"
-                onChange={valorInput}
-
-              />
-            </div>
-            <div className="mb-4">
-              <input
-                type="password"
-                name="senha"
-                placeholder="Senha"
-                className="input-config"
-                onChange={valorInput}
-
-              />
+            <div className="dados-login-input">
+              <div className="mb-4">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  className="input-config"
+                  onChange={valorInput}
+                />
+              </div>
+              <div className="mb-4">
+                <input
+                  type="password"
+                  name="senha"
+                  placeholder="Senha"
+                  className="input-config"
+                  onChange={valorInput}
+                />
+              </div>
             </div>
           </div>
           {status.type === "error"? <p className="fs-5">{status.mensagem}</p>: ""}
           {status.type === "sucesso"? <p className="fs-5">{status.mensagem}</p>: ""}
-          <button type="submit" className="btn btn-danger">
+          <button type="submit" className="btn btn-danger button">
             Cadastrar
           </button>
         </form>

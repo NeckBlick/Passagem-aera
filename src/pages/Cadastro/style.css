@@ -1,9 +1,16 @@
 .headerimg{
     background-image: url(../../../public/assets/headerimg.png);
     background-size: cover;
+    background-repeat: no-repeat;
+}
+.headerimg{
+    width: 100%;
 }
 .primeiro-dados{
-    width: 40%;
+    width: 400px;
+}
+.dados-login-input, .button{
+    width: 400px;
 }
 .input-config{
     width: 100%;
@@ -15,8 +22,7 @@
 }
 .input-config::placeholder{
     font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-
-color: #0000008a;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0000008a;
 }
