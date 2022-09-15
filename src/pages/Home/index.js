@@ -4,6 +4,8 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import './style.css';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
 
@@ -54,14 +56,16 @@ function Home() {
             />
             <Form.Control
               className='ida w-40'
-              type="text"
+              type="date"
               placeholder="Ida : Data"
             />
             <Form.Control
               className='volta w-40'
-              type="text"
+              type="date"
               placeholder="Volta : Data"
             />
+
+            <Button variant="danger" className='botao_voos'>Danger</Button>{' '}
 
           </div>
 
@@ -69,6 +73,69 @@ function Home() {
           
         </div>
         
+      </div>
+
+
+      <div className='container baixo'>
+
+        <div>
+          <p className='texto_oferta'>Ofertas a partir de R$380,57</p>
+        </div>
+
+        
+
+        <div className='row mt-3 tamanho_card'>
+          <div className='col-4'>
+
+              <Card className='imagem' style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="assets/imagem_cidade_1.png" />
+            <Card.Body>
+              <Card.Title>Rio de Janeiro</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </Card.Text>
+              <Card.Text className='preco_viagem'>
+                R$380,57
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          </div>
+
+          <div className='col-4'>
+              <Card className='imagem' style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="assets/imagem_cidade_02.png" />
+            <Card.Body>
+              <Card.Title>Fernando de Noronha</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </Card.Text>
+              <Card.Text className='preco_viagem'>
+                R$473,41
+              </Card.Text>
+            </Card.Body>
+          </Card>
+
+          </div>
+          <div  className='col-4'>
+              <Card className='imagem' style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="assets/imagem_cidade_03.png" />
+            <Card.Body>
+              <Card.Title>Salvador</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </Card.Text>
+              <Card.Text className='preco_viagem'>
+                R$423,10
+              </Card.Text>
+            </Card.Body>
+          </Card>
+
+          </div>
+        </div>
+       
       </div>
 
 
