@@ -8,10 +8,16 @@
     align-items: center;
     justify-content: center;
 }
+@media (max-width:1274px) {
+    .imagem-aviao{
+
+        width: 1270px;
+    }
+}
 
 .dados-passagens{
     display: flex;
-    width: 1188px;
+    width: 1250px;
     height: 210px;
     position: relative;
     z-index: 99999;
@@ -67,4 +73,66 @@
 }
 .ida .volta .{
     width: 50px;
+}
+.botao_voos{
+    background-color: #cf0c12;
+    width: 100px;
+}
+.botao_voos:hover{
+    background-color: #7b0408;
+}
+.texto_oferta{
+
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+margin-bottom: 6rem;
+}
+.imagem{
+    background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+.tamanho_card{
+    margin-bottom: 7rem;
+}
+.preco_viagem{
+
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: #000;
+}
+.texto_viagem{
+    font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 12px;
+}
+.nome_cidade{
+    font-weight: 700;
+}
+.opcoes{
+    height: 31px;
+    width: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #FFFFFF;
+border-radius: 20px;
+}
+.texto_opcoes{
+    font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+.varias_opcoes{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
