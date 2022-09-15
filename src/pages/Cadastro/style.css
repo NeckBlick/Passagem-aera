@@ -1,7 +1,5 @@
 .headerimg{
-    background-image: url(../../../public/assets/headerimg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 100% ;
 }
 .headerimg{
     width: 100%;
@@ -9,9 +7,12 @@
 .primeiro-dados{
     width: 400px;
 }
-.dados-login-input, .button{
+.celular, .dados-login{
     width: 400px;
 }
+.dados-login-input{
+    width: 100%;
+}       
 .input-config{
     width: 100%;
     height: 2.3rem;
@@ -25,4 +26,15 @@
     font-size: 16px;
     line-height: 19px;
     color: #0000008a;
+}
+
+@media(max-width:400px){
+        .primeiro-dados, .celular,.dados-login{
+            width: 315px;
+        }
+}
+@media(max-width:340px){
+    .primeiro-dados, .celular,.dados-login{
+        width: 280px;
+    }
 }

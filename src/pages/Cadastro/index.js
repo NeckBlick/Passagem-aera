@@ -28,9 +28,8 @@ function Cadastro() {
     mensagem: "",
   });
   const cadUsuario = async (e) => {
-    e.preventDefault();
     console.log(usuario.nome);
-    await fetch("http://localhost:8080/api/cadastrar.php", {
+    await fetch("http://localhost/api/cadastrar.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +61,7 @@ function Cadastro() {
     <>
       <Header />
       <div>
-        <div className="container-fluid headerimg"><img src="assets/headerimg.png" alt=""/></div>
+        <div className="container-fluid headerimg"><img src="assets/headerimg.png" alt="" className="headerimg"/></div>
         <div className="container mt-5">
           <h1 className="display-5">Cadastro</h1>
           <p className="fs-5">
@@ -162,55 +161,27 @@ function Cadastro() {
               />
             </div>
           </div>
-          <div className="sexo my-5">
-            <h1 className="display-5">Sexo</h1>
-            <div className="mb-2">
-              <input
-                type="radio"
-                name="masculino"
-                className="mx-2"
-                value="masculino"
-                
-              />
-              <label for="masculino">Masculino</label>
-            </div>
-            <div className="mb-2">
-              <input
-                type="radio"
-                name="feminino"
-                className="mx-2"
-                value="feminino"
-              />
-              <label for="feminino">Feminino</label>
-            </div>
-            <div className="mb-2">
-              <input type="radio" name="outro" className="mx-2" value="outro" />
-              <label for="outro">Outro</label>
-            </div>
-          </div>
           <div className="celular">
-            <h1 className="display-5 ">Número de celular</h1>
+            <h1 className="display-5">Número de celular</h1>
             <div className="dados-login-input">
-
-            <div className="mt-5">
-              <input
-                type="tel"
-                name="telefone"
-                placeholder="Número de telefone"
-                className="input-config"
-                onChange={valorInput}
-
-              />
-            </div>
+              <div className="mt-5">
+                <input
+                  type="tel"
+                  name="telefone"
+                  placeholder="Número de telefone"
+                  className="input-config "
+                  onChange={valorInput}
+                />
+              </div>
             </div>
           </div>
-          <div className="dados-login mt-5">
+          <div className="dados-login-input mt-5">
             <h1 className="display-5">Dados de login para sua conta</h1>
             <p className="fs-5 mb-5">
               Dê preferência ao seu email pessoal para garantir que vai receber
               nossas comunicações.
             </p>
-            <div className="dados-login-input">
+            <div className="dados-login">
               <div className="mb-4">
                 <input
                   type="email"
@@ -233,9 +204,13 @@ function Cadastro() {
           </div>
           {status.type === "error"? <p className="fs-5">{status.mensagem}</p>: ""}
           {status.type === "sucesso"? <p className="fs-5">{status.mensagem}</p>: ""}
+          
+            <Link to="/login">
+
           <button type="submit" className="btn btn-danger button">
             Cadastrar
           </button>
+            </Link>
         </form>
       </div>
     </>
