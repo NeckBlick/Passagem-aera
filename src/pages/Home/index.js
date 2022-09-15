@@ -65,7 +65,7 @@ function Home() {
               placeholder="Volta : Data"
             />
 
-            <Button variant="danger" className='botao_voos'>Danger</Button>{' '}
+            <Button variant="danger" className='botao_voos'>Buscar</Button>{' '}
 
           </div>
 
@@ -90,10 +90,19 @@ function Home() {
               <Card className='imagem' style={{ width: '18rem' }}>
             <Card.Img variant="top" src="assets/imagem_cidade_1.png" />
             <Card.Body>
-              <Card.Title>Rio de Janeiro</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+              <Card.Title className='nome_cidade'>Rio de Janeiro</Card.Title>
+              <div className='varias_opcoes'>
+
+              <div className='opcoes'>
+                <p className='texto_opcoes'>Somente ida </p>
+              </div>
+              <div className='opcoes'>
+                <p className='texto_opcoes'>Somente ida </p>
+              </div>
+
+              </div>
+              <Card.Text className='texto_viagem'>
+                Viagens a partir de 
               </Card.Text>
               <Card.Text className='preco_viagem'>
                 R$380,57
@@ -106,10 +115,19 @@ function Home() {
               <Card className='imagem' style={{ width: '18rem' }}>
             <Card.Img variant="top" src="assets/imagem_cidade_02.png" />
             <Card.Body>
-              <Card.Title>Fernando de Noronha</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+              <Card.Title className='nome_cidade'>Fernando de Noronha</Card.Title>
+              <div className='varias_opcoes'>
+
+              <div className='opcoes'>
+                <p className='texto_opcoes'>Somente ida </p>
+              </div>
+              <div className='opcoes'>
+                <p className='texto_opcoes'>Somente ida </p>
+              </div>
+
+              </div>
+              <Card.Text className='texto_viagem'>
+                Viagens a partir de 
               </Card.Text>
               <Card.Text className='preco_viagem'>
                 R$473,41
@@ -122,10 +140,19 @@ function Home() {
               <Card className='imagem' style={{ width: '18rem' }}>
             <Card.Img variant="top" src="assets/imagem_cidade_03.png" />
             <Card.Body>
-              <Card.Title>Salvador</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+              <Card.Title className='nome_cidade'>Salvador</Card.Title>
+              <div className='varias_opcoes'>
+
+              <div className='opcoes'>
+                <p className='texto_opcoes'>Somente ida </p>
+              </div>
+              <div className='opcoes'>
+                <p className='texto_opcoes'>Somente ida </p>
+              </div>
+
+              </div>
+              <Card.Text className='texto_viagem'>
+                Viagens a partir de 
               </Card.Text>
               <Card.Text className='preco_viagem'>
                 R$423,10
