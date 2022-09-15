@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 function Home() {
   return (
     <div>
-      <Header rota="/cadastro"/>
+      <Header value="Cadastrar" rota="/cadastro"/>
 
 
       <div className='topo'>

@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./header.css";
 import { Link } from "react-router-dom";
 
-const Header = ({ rota }) => {
+const Header = ({ rota, value }) => {
   return (
     <>
       <header className="header">
@@ -14,7 +14,7 @@ const Header = ({ rota }) => {
                 to={rota}
                 className="text-decoration-none h-100 w-100 login-text"
               >
-                Fazer login
+                {value}
               </Link>
             </div>
           </nav>

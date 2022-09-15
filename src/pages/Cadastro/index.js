@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import "./style.css";
 import Header from "../../components/Header";
+import Footer from '../../components/Footer'
 
 function Cadastro() {
   const [usuario, setUsuario] = useState({
@@ -28,7 +29,7 @@ function Cadastro() {
     mensagem: "",
   });
   const cadUsuario = async (e) => {
-    console.log(usuario.nome);
+    e.preventDefault()
     await fetch("http://localhost/api/cadastrar.php", {
       method: "POST",
       headers: {
@@ -37,8 +38,7 @@ function Cadastro() {
       body: JSON.stringify({ usuario }),
     })
       .then((response) => {
-        response.json();
-        console.log(response);
+        return response.json();
       })
       .then((responseJson) => {
         console.log(responseJson);
@@ -46,12 +46,12 @@ function Cadastro() {
           setStatus({
             type: "erro",
             mensagem:
-              "Usuário não foi possivel cadastrar, tente novamente mais tarde",
+            responseJson.mensagem,
           });
         } else {
           setStatus({
             type: "sucesso",
-            mensagem: "Usuário cadastrado com sucesso!",
+            mensagem: responseJson.mensagem,
           });
         }
       });
@@ -86,6 +86,7 @@ function Cadastro() {
                 placeholder="Nome"
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
             <div className="mb-5">
@@ -95,6 +96,7 @@ function Cadastro() {
                 placeholder="Nome de usuário"
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
             <div className="mb-5">
@@ -104,6 +106,7 @@ function Cadastro() {
                 placeholder="Data de nascimento"
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
             <div className="mb-5">
@@ -113,6 +116,7 @@ function Cadastro() {
                 placeholder="Endereço "
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
             <div className="mb-5">
@@ -122,6 +126,7 @@ function Cadastro() {
                 placeholder="Endereço Comercial"
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
             <div className="mb-5">
@@ -131,6 +136,7 @@ function Cadastro() {
                 placeholder="Número do CPF"
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
             <div className="mb-5">
@@ -140,6 +146,7 @@ function Cadastro() {
                 placeholder="Número do RG"
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
             <div className="mb-5">
@@ -149,6 +156,7 @@ function Cadastro() {
                 placeholder="Data de emissão do RG"
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
             <div className="mb-5">
@@ -158,6 +166,7 @@ function Cadastro() {
                 placeholder="Orgão emissor"
                 className="input-config"
                 onChange={valorInput}
+                required
               />
             </div>
           </div>
@@ -171,6 +180,7 @@ function Cadastro() {
                   placeholder="Número de telefone"
                   className="input-config "
                   onChange={valorInput}
+                  required
                 />
               </div>
             </div>
@@ -189,6 +199,7 @@ function Cadastro() {
                   placeholder="Email"
                   className="input-config"
                   onChange={valorInput}
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -198,21 +209,22 @@ function Cadastro() {
                   placeholder="Senha"
                   className="input-config"
                   onChange={valorInput}
+                  required
+                  minLength="6"
                 />
               </div>
             </div>
           </div>
-          {status.type === "error"? <p className="fs-5">{status.mensagem}</p>: ""}
-          {status.type === "sucesso"? <p className="fs-5">{status.mensagem}</p>: ""}
-          
-            <Link to="/login">
+          {status.type === "error" ? <p className="fs-5">{status.mensagem}</p>: ""}
+          {status.type === "sucesso" ? <Navigate to="/login"/>: ""}
 
-          <button type="submit" className="btn btn-danger button">
+          <button type="submit" className="btn btn-danger button mb-5">
             Cadastrar
           </button>
-            </Link>
+          
         </form>
       </div>
+      <Footer/>
     </>
   );
 }

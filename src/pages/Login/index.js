@@ -1,31 +1,57 @@
 import React, { useState } from "react";
 import "./style.css";
 import Header from "../../components/Header";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 function Login() {
   const [usuario, setUsuario] = useState({
     nome_usuario: "",
     senha: "",
   });
+  
   const valorInput = (e) =>{
       setUsuario({
         ...usuario,
         [e.target.name]: e.target.value,
       });
-      console.log(usuario)
   }
+  const [status, setStatus] = useState({
+    type: "",
+    mensagem: "",
+  });
   const buscarUsuario = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost/api/login.php")
+    const settins = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ usuario }),
+    }
+    await fetch("http://localhost/api/login.php", settins)
     .then((response) => {
-      response.json();
-      console.log(response);
-    });
+      return response.json();
+    })
+    .then((responseJson) => {
+      console.log(responseJson)
+      if(responseJson.error){
+        setStatus({
+          type:"erro",
+          mensagem: responseJson.mensagem
+        })
+      }else {
+        setStatus({
+        type: "sucesso",
+        mensagem: responseJson.mensagem,
+      });
+        
+      }
+    })
+    console.log(usuario)
   };
   return (
     <>
-      <Header />
+      <Header value="Home" rota="/" />
       <div className="container-fluid headerimg">
         <img src="assets/headerimg.png" alt="" className="headerimg"/>
       </div>
@@ -56,12 +82,15 @@ function Login() {
               onChange={valorInput}
             />
           </div>
+          {status.type === "erro"? <p>{status.mensagem}</p>: ""}
+          {status.type === "sucesso"? <Navigate to="/logado"/>: ""}
           <button
             type="submit"
             className="btn btn-danger button d-flex align-items-center justify-content-center"
           >
             Entrar
           </button>
+          
           <Link
             to="/cadastro"
             className="mt-4 text-decoration-none text-danger"
