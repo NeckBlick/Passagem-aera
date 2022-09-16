@@ -54,6 +54,14 @@
 .origem{
     width: 244px;
     height: 43px;
+    margin-left: 2rem;
+}
+.destino{
+    width: 244px;
+    height: 43px;
+   
+    
+
 }
 .select{
     display: flex;
@@ -77,6 +85,7 @@
 .botao_voos{
     background-color: #cf0c12;
     width: 100px;
+    margin-left: 3rem;
 }
 .botao_voos:hover{
     background-color: #7b0408;

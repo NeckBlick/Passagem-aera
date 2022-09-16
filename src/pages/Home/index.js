@@ -43,8 +43,23 @@ function Home() {
           </div>
           
           <div className='mt-4 d-flex flex-direction-row align-itens-center p-2'>
+            <Form.Select aria-label="Default select example" title='Origem' className='origem m-0' placeholder='Origem'>
+              <option value="0"disabled>Origem</option>
+              <option value="1">Fernando de Noronha</option>
+              <option value="2">Natal</option>
+              <option value="3">Salvador</option>
+              <option value="4">Rio de Janeiro</option>
+            </Form.Select>
+
+            <Form.Select aria-label="Default select example" title='Destino'className='destino m-0' placeholder='Destino'>
+              <option value="0" disabled>Destino</option>
+              <option value="1">Natal</option>
+              <option value="2">Fernando de Noronha</option>
+              <option value="3">Rio de Janeiro</option>
+              <option value="4">Salvador</option>
+            </Form.Select>
             
-            <Form.Control
+            {/* <Form.Control
               className='origem w-40'
               type="text"
               placeholder="Digite a origem"
@@ -53,14 +68,14 @@ function Home() {
               className='destino w-40'
               type="text"
               placeholder="Digite o destino"
-            />
+            /> */}
             <Form.Control
-              className='ida w-40'
+              className='ida origem w-40'
               type="date"
               placeholder="Ida : Data"
             />
             <Form.Control
-              className='volta w-40'
+              className='volta  origem  w-40'
               type="date"
               placeholder="Volta : Data"
             />

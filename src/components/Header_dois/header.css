@@ -1,0 +1,18 @@
+.header {
+    background-color: #4180ab;
+    padding: 1rem;
+    height: 80px;
+    align-items: center;
+  }
+
+  .headerimg{
+      background-image: url(../../../public/assets/headerimg.png);
+      background-size: cover;
+  }
+  .title{
+  
+    color: #000;
+  }
+   a{
+    text-decoration: none;
+  }

@@ -6,7 +6,8 @@
 }
 .login {
   width: 10rem;
-  height: 2rem;
+  height: 2.5rem;
+  
   padding: 0;
   background: #8db3cb;
   border: 2px solid #ffffff;
@@ -21,8 +22,25 @@
   font-size: 1.3rem;
   line-height: 24px;
   color: #ffffff;
+  margin-top: 10px;
 }
 .headerimg{
     background-image: url(../../../public/assets/headerimg.png);
     background-size: cover;
+}
+.title{
+
+  color: #000;
+}
+ a{
+  text-decoration: none;
+}
+.links{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.icon_pessoa{
+  margin-left: 1rem;
 }

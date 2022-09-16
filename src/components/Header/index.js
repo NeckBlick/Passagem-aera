@@ -7,20 +7,33 @@ const Header = ({ rota, value }) => {
     <>
       <header className="header">
         <div className="container d-flex align-items-center justify-content-between">
-          <h1>321 Viagens</h1>
-          <nav className="h-100 d-flex align-items-center">
-            <div className="login">
-              <Link
-                to={rota}
-                className="text-decoration-none h-100 w-100 login-text"
-              >
-                {value}
+          <Link to="/">
+            <h1 className="title">321 viagens</h1>
+          </Link>
+
+          <div className="links">
+            <nav className="h-100 d-flex align-items-center">
+              <div className="login">
+                <Link
+                  to={rota}
+                  className="text-decoration-none h-100 w-100 login-text"
+                >
+                  {value}
+                </Link>
+              </div>
+            </nav>
+            <div className="img">
+              <Link to="/logado" className="icon_pessoa">
+                <img
+                  src="assets/pessoas.png"
+                  className="imagem_pessoa"
+                  alt="logo_pessoa"
+                />
               </Link>
             </div>
-          </nav>
+          </div>
         </div>
       </header>
-      
     </>
   );
 };

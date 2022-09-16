@@ -1,11 +1,12 @@
 import React from 'react';
-import Header from '../../components/Header';
+import Header_Dois from '../../components/Header_dois';
+import "./style.css"
 
 
 function Logado() {
   return (
     <>
-      <Header/>
+      <Header_Dois/>
     </>
   );
 }

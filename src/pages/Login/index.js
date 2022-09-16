@@ -88,9 +88,12 @@ function Login() {
             type="submit"
             className="btn btn-danger button d-flex align-items-center justify-content-center"
           >
+          <Link 
+          to="/logado"
+          >
             Entrar
+          </Link>
           </button>
-          
           <Link
             to="/cadastro"
             className="mt-4 text-decoration-none text-danger"
