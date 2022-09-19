@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* imagem viagem */
+.imagem-aviao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aviao_imagem{
+    width: 100vw;
+}
+
+/* dados das passagens */
+.dados-passagens{
+    display: flex;
+    width: 1250px;
+    height: 210px;
+    position: relative;
+    z-index: 99999;
+    bottom: 100px;
+    /* background-color: #ffff; */
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    flex-direction: column;
+}
+.idaevolta{
+    width: 145px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.economico{
+    width: 145px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.umpassageiro{
+    width: 158px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.origem{
+    width: 244px;
+    height: 43px;
+    margin-left: 2rem;
+}
+.destino{
+    width: 244px;
+    height: 43px;
+}
+
+.data_viagem{
+    display: flex;
+}
+
+@media (max-width: 1120px) {
+    .dados-passagens{
+        width: 900px;
+        right: 30px;
+    }
+}
+
+.select{
+    display: flex;
+    flex-direction: row;
+}
+.label{
+    display: flex;
+    flex-direction: row;
+    
+}
+.label .ida{
+    width: 130px;
+
+}
+.label .volta{
+    width: 130px;
+}
+.ida .volta{
+    width: 50px;
+}
+.botao_voos{
+    background-color: #cf0c12;
+    width: 100px;
+    margin-left: 3rem;
+}
+.botao_voos:hover{
+    background-color: #7b0408;
+}
+
+
+/* Estilização dos cards */
+
+.card_home{
+    width: 100%;
+    height: 100%;
+}
+.card_home:hover{
+    transform: scale(1.05,1.05);
+    transition: ease-in-out 0.2s;
+}
+.card_home .bottom-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.card_home .bottom-card .title{
+    position: relative;
+    top: 2px;
+    left: -4px;
+    width: 100%;
+}
+.card_home .bottom-card .bottom-ida{
+    width: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 25px;
+    left: 16px;
+}
+.card_home .bottom-card .bottom-ida p{
+    width: 100%;
+    padding: .6rem;
+    margin-right: 1rem;
+    height: 35px;
+    font-size: 12px;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.card_home .bottom-card .price{
+    width: 118px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    left: 10px;
+}
+.card_home .bottom-card .price span{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.46);
+}
+.card_home .bottom-card .price p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    padding: .6rem;
+}
+
+
+
+
+

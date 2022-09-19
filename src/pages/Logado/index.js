@@ -1,6 +1,6 @@
 import React from "react";
 import Header_dois from "../../components/Header_dois";
-import "./style.css";
+import "./logado.css";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 
