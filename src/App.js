@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import Login from './pages/Login';
 import Logado from './pages/Logado';
+import Carrinho from './pages/Carrinho';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
                 <Route path="/cadastro" element={ <Cadastro/> }/>
                 <Route path="/login" element={ <Login/> }/>
                 <Route path="/logado" element={ <Logado/> }/>
+                <Route path="/carrinho" element={ <Carrinho/> }/>
             </Routes>
         </BrowserRouter>
 

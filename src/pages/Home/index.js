@@ -2,7 +2,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import './style.css';
+import './home.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -12,21 +12,21 @@ import Card from 'react-bootstrap/Card';
 function Home() {
   return (
     <div>
-      <Header value="Cadastrar" rota="/cadastro"/>
+      <Header value="Cadastrar" rota="/cadastro" />
 
 
       <div className='topo'>
 
-        <div  className='imagem-aviao'>
-          <img src='assets/imagem_aviao.png' alt='imagem de um aviao'/> 
+        <div className='imagem-aviao'>
+          <img src='assets/imagem_aviao.png' alt='imagem de um aviao' />
         </div>
 
         <div className='container dados-passagens'>
- 
+
           <div className='conatiner align-items-center  d-flex p-2 mt-4'>
             <Form.Select aria-label="Default select example" className='idaevolta m-0'>
               <option>Ida e Volta</option>
-              <option value="1">Somente ida</option>  
+              <option value="1">Somente ida</option>
             </Form.Select>
 
             <Form.Select aria-label="Default select example" className='economico m-0 mx-3'>
@@ -41,24 +41,24 @@ function Home() {
               <option value="2">3 ou +</option>
             </Form.Select>
           </div>
-          
+
           <div className='mt-4 d-flex flex-direction-row align-itens-center p-2'>
             <Form.Select aria-label="Default select example" title='Origem' className='origem m-0' placeholder='Origem'>
-              <option value="0"disabled>Origem</option>
+              <option value="0" disabled>Origem</option>
               <option value="1">Fernando de Noronha</option>
               <option value="2">Natal</option>
               <option value="3">Salvador</option>
               <option value="4">Rio de Janeiro</option>
             </Form.Select>
 
-            <Form.Select aria-label="Default select example" title='Destino'className='destino m-0' placeholder='Destino'>
+            <Form.Select aria-label="Default select example" title='Destino' className='destino m-0' placeholder='Destino'>
               <option value="0" disabled>Destino</option>
               <option value="1">Natal</option>
               <option value="2">Fernando de Noronha</option>
               <option value="3">Rio de Janeiro</option>
               <option value="4">Salvador</option>
             </Form.Select>
-            
+
             {/* <Form.Control
               className='origem w-40'
               type="text"
@@ -85,9 +85,9 @@ function Home() {
           </div>
 
 
-          
+
         </div>
-        
+
       </div>
 
 
@@ -97,94 +97,94 @@ function Home() {
           <p className='texto_oferta'>Ofertas a partir de R$380,57</p>
         </div>
 
-        
+
 
         <div className='row mt-3 tamanho_card'>
           <div className='col-4'>
 
-              <Card className='imagem' style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="assets/imagem_cidade_1.png" />
-            <Card.Body>
-              <Card.Title className='nome_cidade'>Rio de Janeiro</Card.Title>
-              <div className='varias_opcoes'>
+            <Card className='imagem' style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="assets/imagem_cidade_1.png" />
+              <Card.Body>
+                <Card.Title className='nome_cidade'>Rio de Janeiro</Card.Title>
+                <div className='varias_opcoes'>
 
-              <div className='opcoes'>
-                <p className='texto_opcoes'>Somente ida </p>
-              </div>
-              <div className='opcoes'>
-                <p className='texto_opcoes'>Somente ida </p>
-              </div>
+                  <div className='opcoes'>
+                    <p className='texto_opcoes'>Somente ida </p>
+                  </div>
+                  <div className='opcoes'>
+                    <p className='texto_opcoes'>Somente ida </p>
+                  </div>
 
-              </div>
-              <Card.Text className='texto_viagem'>
-                Viagens a partir de 
-              </Card.Text>
-              <Card.Text className='preco_viagem'>
-                R$380,57
-              </Card.Text>
-            </Card.Body>
-          </Card>
+                </div>
+                <Card.Text className='texto_viagem'>
+                  Viagens a partir de
+                </Card.Text>
+                <Card.Text className='preco_viagem'>
+                  R$380,57
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </div>
 
           <div className='col-4'>
-              <Card className='imagem' style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="assets/imagem_cidade_02.png" />
-            <Card.Body>
-              <Card.Title className='nome_cidade'>Fernando de Noronha</Card.Title>
-              <div className='varias_opcoes'>
+            <Card className='imagem' style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="assets/imagem_cidade_02.png" />
+              <Card.Body>
+                <Card.Title className='nome_cidade'>Fernando de Noronha</Card.Title>
+                <div className='varias_opcoes'>
 
-              <div className='opcoes'>
-                <p className='texto_opcoes'>Somente ida </p>
-              </div>
-              <div className='opcoes'>
-                <p className='texto_opcoes'>Somente ida </p>
-              </div>
+                  <div className='opcoes'>
+                    <p className='texto_opcoes'>Somente ida </p>
+                  </div>
+                  <div className='opcoes'>
+                    <p className='texto_opcoes'>Somente ida </p>
+                  </div>
 
-              </div>
-              <Card.Text className='texto_viagem'>
-                Viagens a partir de 
-              </Card.Text>
-              <Card.Text className='preco_viagem'>
-                R$473,41
-              </Card.Text>
-            </Card.Body>
-          </Card>
+                </div>
+                <Card.Text className='texto_viagem'>
+                  Viagens a partir de
+                </Card.Text>
+                <Card.Text className='preco_viagem'>
+                  R$473,41
+                </Card.Text>
+              </Card.Body>
+            </Card>
 
           </div>
-          <div  className='col-4'>
-              <Card className='imagem' style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="assets/imagem_cidade_03.png" />
-            <Card.Body>
-              <Card.Title className='nome_cidade'>Salvador</Card.Title>
-              <div className='varias_opcoes'>
+          <div className='col-4'>
+            <Card className='imagem' style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="assets/imagem_cidade_03.png" />
+              <Card.Body>
+                <Card.Title className='nome_cidade'>Salvador</Card.Title>
+                <div className='varias_opcoes'>
 
-              <div className='opcoes'>
-                <p className='texto_opcoes'>Somente ida </p>
-              </div>
-              <div className='opcoes'>
-                <p className='texto_opcoes'>Somente ida </p>
-              </div>
+                  <div className='opcoes'>
+                    <p className='texto_opcoes'>Somente ida </p>
+                  </div>
+                  <div className='opcoes'>
+                    <p className='texto_opcoes'>Somente ida </p>
+                  </div>
 
-              </div>
-              <Card.Text className='texto_viagem'>
-                Viagens a partir de 
-              </Card.Text>
-              <Card.Text className='preco_viagem'>
-                R$423,10
-              </Card.Text>
-            </Card.Body>
-          </Card>
+                </div>
+                <Card.Text className='texto_viagem'>
+                  Viagens a partir de
+                </Card.Text>
+                <Card.Text className='preco_viagem'>
+                  R$423,10
+                </Card.Text>
+              </Card.Body>
+            </Card>
 
           </div>
         </div>
-       
+
       </div>
 
 
-        <Footer/>
+      <Footer />
     </div>
   )
- 
+
 }
 
 export default Home;
