@@ -3,18 +3,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 /* imagem viagem */
+=======
+>>>>>>> d45b6027c3536e12120e99682bd93c79e6b68217
 .imagem-aviao{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+<<<<<<< HEAD
 
 .aviao_imagem{
     width: 100vw;
 }
 
 /* dados das passagens */
+=======
+@media (max-width:1274px) {
+    .imagem-aviao{
+
+        width: 1270px;
+    }
+}
+
+>>>>>>> d45b6027c3536e12120e99682bd93c79e6b68217
 .dados-passagens{
     display: flex;
     width: 1250px;
@@ -50,6 +63,10 @@
     margin-top: 50px;
     margin-left: 30px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d45b6027c3536e12120e99682bd93c79e6b68217
 .origem{
     width: 244px;
     height: 43px;
@@ -58,6 +75,7 @@
 .destino{
     width: 244px;
     height: 43px;
+<<<<<<< HEAD
 }
 
 .data_viagem{
@@ -71,6 +89,12 @@
     }
 }
 
+=======
+   
+    
+
+}
+>>>>>>> d45b6027c3536e12120e99682bd93c79e6b68217
 .select{
     display: flex;
     flex-direction: row;
@@ -87,7 +111,11 @@
 .label .volta{
     width: 130px;
 }
+<<<<<<< HEAD
 .ida .volta{
+=======
+.ida .volta .{
+>>>>>>> d45b6027c3536e12120e99682bd93c79e6b68217
     width: 50px;
 }
 .botao_voos{
@@ -98,6 +126,7 @@
 .botao_voos:hover{
     background-color: #7b0408;
 }
+<<<<<<< HEAD
 
 
 /* Estilização dos cards */
@@ -178,3 +207,60 @@
 
 
 
+=======
+.texto_oferta{
+
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+margin-bottom: 6rem;
+}
+.imagem{
+    background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+.tamanho_card{
+    margin-bottom: 7rem;
+}
+.preco_viagem{
+
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: #000;
+}
+.texto_viagem{
+    font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 12px;
+}
+.nome_cidade{
+    font-weight: 700;
+}
+.opcoes{
+    height: 31px;
+    width: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #FFFFFF;
+border-radius: 20px;
+}
+.texto_opcoes{
+    font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+.varias_opcoes{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+>>>>>>> d45b6027c3536e12120e99682bd93c79e6b68217

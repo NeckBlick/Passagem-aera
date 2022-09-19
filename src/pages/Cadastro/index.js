@@ -60,7 +60,7 @@ function Cadastro() {
   return (
     <>
       <Header />
-      <div>
+      <div className="mb-5">
         <div className="container-fluid headerimg"><img src="assets/headerimg.png" alt="" className="headerimg"/></div>
         <div className="container mt-5">
           <h1 className="display-5">Cadastro</h1>
