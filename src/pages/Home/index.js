@@ -18,7 +18,7 @@ function Home() {
         </div>
 
         <div className="container dados-passagens ">
-          <div className="conatiner align-items-center  d-flex p-2 mt-4">
+          <div className="conatiner cima-container align-items-center  d-flex p-2 mt-4">
             <Form.Select
               aria-label="Default select example"
               className="idaevolta m-0"
@@ -46,7 +46,7 @@ function Home() {
             </Form.Select>
           </div>
 
-          <div className="mt-4 d-flex flex-direction-row align-itens-center p-2 flex-wrap">
+          <div className=" baixo-container mt-4 d-flex flex-direction-row align-itens-center p-2 flex-wrap">
             <Form.Select
               aria-label="Default select example"
               title="Origem"
@@ -87,11 +87,13 @@ function Home() {
               type="date"
               placeholder="Volta : Data"
             />
+            <div className="botao_buscar ">
 
-            </div>
             <Button variant="danger" className="botao_voos">
               Buscar
             </Button>{" "}
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +103,7 @@ function Home() {
           <p className="texto_oferta">Ofertas a partir de R$380,57</p>
         </div>  
 
-        <div className=" container mb-5">
+        <div className=" container mb-6">
               <div className="row flex-wrap">
                 <div className="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center align-items-center my-3">
                   <div className="card_home">

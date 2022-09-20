@@ -26,3 +26,8 @@ margin-top: 2rem;
     text-align: center;
     margin-top: 2rem;
 }
+@media (max-width: 707px) {
+    .logo-footer{
+        display: none;
+    }
+}

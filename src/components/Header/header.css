@@ -44,3 +44,22 @@
 .icon_pessoa{
   margin-left: 1rem;
 }
+@media (max-width: 380px) {
+  .login-text{
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+  .login{
+    width: 5rem;
+    height: 2rem;
+  }
+  .title{
+    font-size: 1rem;
+    margin-top: 7px;
+    margin-right: 5px;
+  }
+  .icon_pessoa{
+    width: 6px;
+    height: 6px;
+  }
+}
