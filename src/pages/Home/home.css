@@ -219,3 +219,20 @@
   color: #000000;
   padding: 0.6rem;
 }
+.busca{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.busca tr td{
+  border-bottom: 1px solid #000000;
+}
+.busca tr th:nth-last-child(3){
+  border-radius: 10px 0 0 10px;
+}
+.busca tr th:nth-last-child(1){
+  border-radius: 0px 10px 10px 0px;
+}
