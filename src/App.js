@@ -5,6 +5,7 @@ import Cadastro from "./pages/Cadastro";
 import Login from './pages/Login';
 import Logado from './pages/Logado';
 import Carrinho from './pages/Carrinho';
+import Pagamento from './pages/Pagamento';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/login" element={ <Login/> }/>
                 <Route path="/logado" element={ <Logado/> }/>
                 <Route path="/carrinho" element={ <Carrinho/> }/>
+                <Route path="/pagamento" element={ <Pagamento/> }/>
             </Routes>
         </BrowserRouter>
 

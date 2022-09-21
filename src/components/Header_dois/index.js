@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./header.css";
+import "./header_dois.css";
 import { Link } from "react-router-dom";
 
 const Header_Dois = () => {
