@@ -12,8 +12,11 @@ function Home() {
   useEffect(() => {
     const buscarVoos = async (e) => {
       await fetch("http://localhost/api/buscarvoos.php")
-        .then((response) => response.json())
+        .then((response) => 
+         response.json()
+         )
         .then((data) => {
+          
           setVoos(data);
         });
     };
@@ -25,7 +28,6 @@ function Home() {
         <h1 className="display-4">Voo não encontrado</h1>
       )
     }else{
-
     setTable(<table>
       <tr>
         <th className="fs-2 p-2 text-center bg-danger">Companhia</th>
@@ -116,7 +118,7 @@ function Home() {
               <option value="4">Salvador</option>
             </Form.Select>
 
-            <div className="data_viagem">
+            {/* <div className="data_viagem">
               <Form.Control
                 className="ida origem w-40"
                 type="date"
@@ -127,12 +129,12 @@ function Home() {
                 type="date"
                 placeholder="Volta : Data"
               />
+            </div> */}
               <div className="botao_buscar ">
                 <Button variant="danger" className="botao_voos" onClick={exibirVoos}>
                   Buscar
                 </Button>{" "}
               </div>
-            </div>
           </div>
         </div>
       </div>
