@@ -112,6 +112,8 @@
 .destino {
   width: 244px;
   height: 43px;
+  position: relative;
+  left: 1%;
 }
 
 .data_viagem {
