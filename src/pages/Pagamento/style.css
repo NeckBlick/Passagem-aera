@@ -1,7 +1,3 @@
-.img_header {
-  border-radius: 0px 0px 30px 30px;
-}
-
 p {
   display: flex;
   align-items: center;
@@ -15,62 +11,192 @@ hr {
   color: black;
 }
 
-.forma {
-  width: 503px;
-  height: 80px;
-  border: 2px solid rgba(147, 141, 141, 0.75);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-right: 15rem;
-}
-
-.box-forma {
-  width: 100%;
-  height: 200px;
-  margin-top: 10rem;
-  display: flex;
-  justify-content: center;
-}
-.a_opcao {
-  font-weight: 900;
-}
-
 .dados_pagamento {
   width: 100%;
-  height: 800px;
-  background-color: #e4ebf0;
 }
+
 h6 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
   line-height: 44px;
-  margin-top: 6rem !important;
-  margin-left: 10rem;
-}
-.dados_cartao {
-  display: flex;
-  justify-content: column;
-  align-items: flex-start;
+  margin-top: 4rem !important;
+  margin-left: 8rem;
 }
 
-.data {
-  width: 35%;
-}
-.parcelas {
-  width: 15%;
-  margin-left: 5rem;
+.dados_cartao {
+  display: flex;
+  justify-content: flex-start;
 }
 .cartao1 {
-  width: 35%;
-  border-right: 10%;
-  margin-left: 1.5rem;
+  width: 50%;
 }
+
 .cartao2 {
-  width: 35%;
+  width: 50%;
 }
-.div_centro{
+
+.conteudo2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10%;
+  margin-top: 5rem;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10%;
+}
+.data {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.data2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10%;
+}
+
+.parcelas {
+  width: 50%;
+  display: flex;
+}
+
+.parcelas2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10%;
+}
+
+.box-forma {
+  width: 80px;
+  height: 60px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 12rem;
+}
+
+.forma {
+  width: 190px;
+  height: 40px;
+  border: 2px solid rgba(147, 141, 141, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 15rem;
+}
+.a_opcao {
+  font-weight: 900;
+}
+.botao_buscar{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15%;
+}
+
+.botao_comprar{
+  width: 190px;
+}
+
+h1{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 44px;
+}
+.despedida{
+  width: 60%;
+  margin-left: 10%;
+  margin-top: 8rem;
+}
+
+footer{
+  width: 100%;
+}
+.background{
+  z-index: 999;
+}
+
+
+@media (max-width: 680px) {
+  .cartao1 {
+    width: 70%;
+  }
+  .cartao2{
+    width: 70%;
+  }
+  .data{
+    width: 70%;
+  }
+  .parcelas{
+    width: 70%;
+  }
+  .dados_cartao {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+  }
+  .despedida{
+    margin-bottom: 7rem;
+  }
+  .botao_buscar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2.5rem;
+    margin-left: 10%;
+
+  }
+}
+
+@media (max-width: 480px){
+  .cartao1 {
+    width: 90%;
+  }
+  .cartao2{
+    width: 90%;
+  }
+  .data{
+    width: 90%;
+  }
+  .parcelas{
+    width: 90%;
+  }
+  .dados_cartao {
+    display: flex;
+    justify-content: flex-start;
+  }
+  h6 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 44px;
+    margin-top: 4rem !important;
+    margin-left: 4rem;
+  }
+  .box-forma {
+    width: 80px;
+    height: 60px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1.5rem;
+  }
+  .despedida{
+    margin-bottom: 7rem;
+  }
+  .botao_buscar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2.5rem;
+    margin-left: 10%;
+
+  }
 }

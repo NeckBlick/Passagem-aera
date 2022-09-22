@@ -122,18 +122,6 @@ function Home() {
               <option value="4">Salvador</option>
             </Form.Select>
 
-            {/* <div className="data_viagem">
-              <Form.Control
-                className="ida origem w-40"
-                type="date"
-                placeholder="Ida : Data"
-              />
-              <Form.Control
-                className="volta  origem  w-40"
-                type="date"
-                placeholder="Volta : Data"
-              />
-            </div> */}
               <div className="botao_buscar ">
                 <Button variant="danger" className="botao_voos" onClick={exibirVoos}>
                   Buscar

@@ -1,0 +1,89 @@
+.text-minhasviagens p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.title_carrinho{
+    width: 100%;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.text_box {
+    box-sizing: border-box;
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid rgba(147, 141, 141, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    font-weight: 600;
+    border-radius: 20px;
+
+}
+/* estilizando card */
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.price_carrinho p{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+.preco_carrinho{
+    font-size: 1rem;
+
+}
+.ida_volta{
+    display: flex;
+    flex-direction: row;
+}
+.seta_icon{
+    height: 6.5rem;
+    width: 6.5rem;
+}
+.baixo-card{
+    display: flex;
+}
+.label{
+    background: #FFFFFF;
+    border: 1px solid rgba(147, 141, 141, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 50%;
+    align-items: center;
+
+}
+.text_label{
+  display: flex;
+
+}
+@media (max-width: 940px) {
+    .baixo-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .preco_carrinho{
+        font-size: 1.5;
+    }
+
+}
