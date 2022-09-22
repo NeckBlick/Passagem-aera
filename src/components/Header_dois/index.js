@@ -15,10 +15,8 @@ const Header_Dois = () => {
                 <Link
                     to='/logado'
                     className="icon_pessoa">
-
             <img src="assets/pessoas.png" className="imagem_pessoa" alt="logo_pessoa"/>
                 </Link>
-            
             </div>
         </div>
       </header>

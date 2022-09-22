@@ -17,7 +17,7 @@ function Logado() {
         />
       </div>
 
-      <div className="card_2">
+      <div className="card_2 flex-direction-column">
         <div className="circulo_pessoa">
           <img src="assets/pessoas2.png" alt="pessoas" className="pessoas2" />
         </div>

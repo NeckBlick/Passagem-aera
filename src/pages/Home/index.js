@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [voos, setVoos] = useState([]);
@@ -23,23 +24,26 @@ function Home() {
     buscarVoos();
   }, []);
   const exibirVoos = () => {
-    if(voos[0].error){
+    if(voos.error){
       setTable(
-        <h1 className="display-4">Voo não encontrado</h1>
+        <h1 className="display-5">Nenhum voo foi encontrado</h1>
       )
     }else{
     setTable(<table>
       <tr>
-        <th className="fs-2 p-2 text-center bg-danger">Companhia</th>
-        <th className="fs-2 p-2 text-center bg-danger">Dia do Voo</th>
-        <th className="fs-2 p-2 text-center bg-danger">Destino</th>
+        <th className="fs-2 p-2 text-center bg-danger text-white">Companhia</th>
+        <th className="fs-2 p-2 text-center bg-danger text-white">Dia do Voo</th>
+        <th className="fs-2 p-2 text-center bg-danger text-white">Destino</th>
+        <th className="fs-2 p-2 text-center bg-danger text-white">Preço</th>
       </tr>
       {voos.map((voo) => {
         return (
           <tr key={voo.id}>
-            <td className="fs-4 text-center p-2">{voo.companhia}</td>
+            <td className="fs-4 text-center p-2 ">{voo.companhia}</td>
             <td className="fs-4 text-center p-2">{voo.diavoo}</td>
             <td className="fs-4 text-center p-2">{voo.destino}</td>
+            <td className="fs-4 text-center p-2">R${voo.preco}</td>
+            <td className="fs-4 text-center p-2 bg-danger "><Link to="/pagamento" className="bg-danger w-100 h-100 text-white">Comprar</Link></td>
           </tr>
         );
       })}

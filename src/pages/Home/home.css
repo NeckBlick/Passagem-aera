@@ -12,6 +12,7 @@
 
 .aviao_imagem {
   width: 100vw;
+
 }
 
 /* dados das passagens */
@@ -232,9 +233,9 @@
 .busca tr td{
   border-bottom: 1px solid #000000;
 }
-.busca tr th:nth-last-child(3){
-  border-radius: 10px 0 0 10px;
+.busca tr th:nth-last-child(4){
+  border-radius: 10px 0 0 0px;
 }
 .busca tr th:nth-last-child(1){
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 10px 0px 0px;
 }
