@@ -9,7 +9,7 @@ export default function Admin() {
   const [voos, setVoos] = useState([]);
   const [user, setUser] = useState([]);
   const [table, setTable] = useState();
-//   const [id] = useState(props.match.params.id)
+
   useEffect(() => {
     const buscarVoos = async () => {
       await fetch("http://localhost/api/buscarvoos.php")
@@ -32,7 +32,7 @@ export default function Admin() {
   }, []);
   const exibirVoos = () => {
     setTable(
-      <table className="voo">
+      <table className="voo ">
         <tr>
           <th className="p-2 bg-primary text-white text-center">Id voo</th>
           <th className="p-2 bg-primary text-white text-center">Companhia</th>
@@ -69,7 +69,7 @@ export default function Admin() {
   };
   const exibirUsuarios = () => {
     setTable(
-      <table className="voo">
+      <table className="voo ">
         <tr>
           <th className="p-2 bg-primary text-white text-center">Id usuario</th>
           <th className="p-2 bg-primary text-white text-center">CPF</th>
@@ -145,7 +145,7 @@ export default function Admin() {
               <p className="btn btn-danger" onClick={ exibirVoos }>Vizualizar Voo</p>
             </div>
           </div>
-          <div className="content-admin">{table}</div>
+          <div className="content-admin overflow-auto">{table}</div>
         </div>
       </div>
     </>
