@@ -7,6 +7,7 @@ import Logado from './pages/Logado';
 import Carrinho from './pages/Carrinho';
 import Pagamento from './pages/Pagamento';
 import Admin from './pages/Admin';
+import EditUser from './pages/EditUser';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/carrinho" element={ <Carrinho/> }/>
                 <Route path="/pagamento" element={ <Pagamento/> }/>
                 <Route path="/wp-admin" element={ <Admin/> }/>
+                <Route path="/edituser/:id" element={ <EditUser/> }/>
             </Routes>
         </BrowserRouter>
 

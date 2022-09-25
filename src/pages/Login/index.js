@@ -71,6 +71,7 @@ function Login() {
               placeholder="Nome de usuário ou email"
               className="mt-5 input-config"
               onChange={valorInput}
+              autoComplete="off"
             />
           </div>
           <div className="w-100">
@@ -80,10 +81,11 @@ function Login() {
               placeholder="Senha"
               className="my-5 input-config"
               onChange={valorInput}
+              autoComplete="current-password"
             />
           </div>
           {status.type === "erro"? <p>{status.mensagem}</p>: ""}
-          {status.type === "sucesso"? <Navigate to="/logado"/>: ""}
+          {status.type === "sucesso"? <Navigate to="/"/>: ""}
           <button
             type="submit"
             className="btn btn-danger button d-flex align-items-center justify-content-center"

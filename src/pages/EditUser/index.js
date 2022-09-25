@@ -1,83 +1,93 @@
-import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import "./style.css";
+import React, { useState, useEffect} from "react";
+import { Link, Navigate, useParams } from "react-router-dom";
 import Header from "../../components/Header";
-import Footer from '../../components/Footer'
 
-function Cadastro() {
-  const [usuario, setUsuario] = useState({
-    cpf: "",
-    nome: "",
-    nome_usuario: "",
-    endereco_completo: "",
-    telefone: "",
-    email: "",
-    endereco_comercial: "",
-    data_nascimento: "",
-    rg: "",
-    data_emissao_rg: "",
-    orgao_emissor: "",
-    senha: "",
-  });
-  const valorInput = (e) =>
+
+function EditUser() {
+    const [status, setStatus] = useState({
+        type: "",
+        mrnsagem: ""
+    })
+    const [usuario, setUsuario] = useState({
+        cpf: "",
+        nome: "",
+        nome_usuario: "",
+        endereco_completo: "",
+        telefone: "",
+        email: "",
+        endereco_comercial: "",
+        data_nascimento: "",
+        rg: "",
+        data_emissao_rg: "",
+        orgao_emissor: "",
+        senha: "",
+      });
+    
+     
+      const valorInput = (e) =>
     setUsuario({
       ...usuario,
       [e.target.name]: e.target.value,
     });
-  const [status, setStatus] = useState({
-    type: "",
-    mensagem: "",
-  });
-  const cadUsuario = async (e) => {
-    e.preventDefault()
-    await fetch("http://localhost/api/cadastrar.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ usuario }),
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((responseJson) => {
-        console.log(responseJson);
-        if (responseJson.erro) {
-          setStatus({
-            type: "erro",
-            mensagem:
-            responseJson.mensagem,
-          });
-        } else {
-          setStatus({
-            type: "sucesso",
-            mensagem: responseJson.mensagem,
-          });
-        }
-      });
-      
-  };
-  return (
+    const {id} = useParams()
+    useEffect(() =>{
+        const buscarUser = async () => {
+            await fetch("http://localhost/api/vizualizar.php?id="+id)
+              .then((response) => response.json())
+              .then((data) => {
+                console.log(data)
+                setUsuario({
+                    cpf: data.cpf,
+                    nome: data.nome,
+                    nome_usuario: data.user,
+                    endereco_completo: data.endereco,
+                    telefone: data.telefone,
+                    email: data.email,
+                    endereco_comercial: data.endereco_comercial,
+                    data_nascimento: data.data_nascimento,
+                    rg: data.rg,
+                    data_emissao_rg: data.emissao_rg,
+                    orgao_emissor: data.uf,
+                    senha: data.senha,
+                  });
+                  
+              });
+          };
+          buscarUser()
+        },[id])
+        console.log(usuario)
+       
+        const buscar = async (e) => {
+            e.preventDefault()
+            await fetch(`http://localhost/api/edituser.php?id=${id}`,{
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ usuario }),
+              })
+           .then(response => response.json())
+           .then(data => {
+            if(data.error){
+                setStatus({
+                    type: "erro",
+                    mrnsagem: "Usuário não foi editado"
+                })
+            }else{
+                setStatus({
+                    type: "sucesso",
+                    mrnsagem: "Usuário foi editado com sucesso"
+                })
+            }
+            
+           })
+        };
+        buscar()
+        return (
     <>
-      <Header />
-      <div className="mb-5">
-        <div className="container-fluid headerimg"><img src="assets/headerimg.png" alt="" className="headerimg"/></div>
-        <div className="container mt-5">
-          <h1 className="display-5">Cadastro</h1>
-          <p className="fs-5">
-            Se você já faz parte da 321viagens, não precisa criar uma conta
-            nova. <Link to="/login">Acesse sua conta aqui.</Link>
-          </p>
-        </div>
-        <div className="container mt-5">
-          <h1 className="display-5">Dados Pessoais</h1>
-          <p className="fs-5">
-            Insira seus dados exatamente como aparecem em seu CPF e RG. Eles
-            serão usados quando você comprar suas passagens.
-          </p>
-        </div>
-
-        <form  className="container" onSubmit={cadUsuario}>
+        <Header/>
+        <form  className="container" onSubmit={buscar}>
+        <Link to="/wp-admin" className="btn btn-danger">Vizualizar</Link>
           <div className="primeiro-dados">
             <div className="mb-5">
               <input  
@@ -87,6 +97,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+               value={usuario.nome}
               />
             </div>
             <div className="mb-5">
@@ -97,6 +108,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+                value={usuario.nome_usuario}
               />
             </div>
             <div className="mb-5">
@@ -107,6 +119,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+                value={usuario.data_nascimento}
               />
             </div>
             <div className="mb-5">
@@ -117,6 +130,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+                value={usuario.endereco_completo}
               />
             </div>
             <div className="mb-5">
@@ -127,6 +141,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+                value={usuario.endereco_comercial}
               />
             </div>
             <div className="mb-5">
@@ -137,6 +152,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+                value={usuario.cpf}
               />
             </div>
             <div className="mb-5">
@@ -147,6 +163,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+                value={usuario.rg}
               />
             </div>
             <div className="mb-5">
@@ -157,6 +174,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+                value={usuario.data_emissao_rg}
               />
             </div>
             <div className="mb-5">
@@ -167,6 +185,7 @@ function Cadastro() {
                 className="input-config"
                 onChange={valorInput}
                 required
+                value={usuario.orgao_emissor}
               />
             </div>
           </div>
@@ -181,6 +200,7 @@ function Cadastro() {
                   className="input-config "
                   onChange={valorInput}
                   required
+                  value={usuario.telefone}
                 />
               </div>
             </div>
@@ -201,6 +221,7 @@ function Cadastro() {
                   onChange={valorInput}
                   required
                   autoComplete="off"
+                  value={usuario.email}
                 />
               </div>
               <div className="mb-4">
@@ -213,22 +234,21 @@ function Cadastro() {
                   required
                   minLength="6"
                   autoComplete="current-password"
+                  value={usuario.senha}
                 />
               </div>
             </div>
           </div>
-          {status.type === "error" ? <p className="fs-5">{status.mensagem}</p>: ""}
-          {status.type === "sucesso" ? <Navigate to="/login"/>: ""}
+          {status.type === "erro"? <p>{status.mensagem}</p>: ""}
+          {status.type === "sucesso"? <Navigate to="/wp-admin"/>: ""}
 
           <button type="submit" className="btn btn-danger button mb-5">
-            Cadastrar
+            Editar
           </button>
           
         </form>
-      </div>
-      <Footer/>
     </>
   );
 }
 
-export default Cadastro;
+export default EditUser;
