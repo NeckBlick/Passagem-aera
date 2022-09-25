@@ -9,6 +9,7 @@ import Pagamento from './pages/Pagamento';
 import Admin from './pages/Admin';
 import EditUser from './pages/EditUser';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/pagamento" element={ <Pagamento/> }/>
                 <Route path="/wp-admin" element={ <Admin/> }/>
                 <Route path="/edituser/:id" element={ <EditUser/> }/>
+               
             </Routes>
         </BrowserRouter>
 

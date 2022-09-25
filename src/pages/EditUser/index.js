@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import Header from "../../components/Header";
+import './style.css'
 
 
 function EditUser() {
@@ -83,11 +84,15 @@ function EditUser() {
            })
         };
         buscar()
+       
         return (
     <>
         <Header/>
+        <div className="container d-flex align-items-center justify-content-between mb-5 edit" >
+          <h1 className="display-5">Editar Usuário</h1>
+          <Link to="/wp-admin" className="btn btn-danger">Vizualizar</Link>
+        </div>
         <form  className="container" onSubmit={buscar}>
-        <Link to="/wp-admin" className="btn btn-danger">Vizualizar</Link>
           <div className="primeiro-dados">
             <div className="mb-5">
               <input  
@@ -207,7 +212,7 @@ function EditUser() {
           </div>
           <div className="dados-login-input mt-5">
             <h1 className="display-5">Dados de login para sua conta</h1>
-            <p className="fs-5 mb-5">
+            <p className="fs-5 mb-5 p-0 d-block">
               Dê preferência ao seu email pessoal para garantir que vai receber
               nossas comunicações.
             </p>

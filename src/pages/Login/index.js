@@ -33,7 +33,10 @@ function Login() {
       return response.json();
     })
     .then((responseJson) => {
-      console.log(responseJson)
+      setUsuario({
+        nome_usuario: responseJson.usuario,
+        senha: responseJson.senha,
+      })
       if(responseJson.error){
         setStatus({
           type:"erro",
@@ -85,16 +88,13 @@ function Login() {
             />
           </div>
           {status.type === "erro"? <p>{status.mensagem}</p>: ""}
+          {usuario.nome_usuario === "admin" && usuario.senha === "admin"? <Navigate to="/wp-admin"/>: ""}
           {status.type === "sucesso"? <Navigate to="/"/>: ""}
           <button
             type="submit"
             className="btn btn-danger button d-flex align-items-center justify-content-center"
           >
-          <Link 
-          to="/logado"
-          >
             Entrar
-          </Link>
           </button>
           <Link
             to="/cadastro"
