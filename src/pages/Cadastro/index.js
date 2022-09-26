@@ -226,7 +226,7 @@ function Cadastro() {
           
         </form>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
