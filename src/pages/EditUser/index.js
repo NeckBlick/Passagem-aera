@@ -95,10 +95,10 @@ function EditUser() {
         <form  className="container" onSubmit={buscar}>
           <div className="primeiro-dados">
             <div className="mb-5">
+            <label>Nome</label>
               <input  
                 type="text"
                 name="nome"
-                placeholder="Nome"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -106,21 +106,22 @@ function EditUser() {
               />
             </div>
             <div className="mb-5">
+            <label>Nome usuario</label>
               <input
                 type="text"
                 name="nome_usuario"
-                placeholder="Nome de usuário"
                 className="input-config"
                 onChange={valorInput}
                 required
                 value={usuario.nome_usuario}
               />
             </div>
+
             <div className="mb-5">
+            <label>Data de nascimento</label>
               <input
                 type="date"
                 name="data_nascimento"
-                placeholder="Data de nascimento"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -128,10 +129,10 @@ function EditUser() {
               />
             </div>
             <div className="mb-5">
+            <label>Endereço Completo</label>
               <input
                 type="text"
                 name="endereco_completo"
-                placeholder="Endereço "
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -139,10 +140,10 @@ function EditUser() {
               />
             </div>
             <div className="mb-5">
+            <label>Endereço Comercial</label>
               <input
                 type="text"
                 name="endereco_comercial"
-                placeholder="Endereço Comercial"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -150,10 +151,10 @@ function EditUser() {
               />
             </div>
             <div className="mb-5">
+            <label>CPF</label>
               <input
                 type="text"
                 name="cpf"
-                placeholder="Número do CPF"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -161,10 +162,10 @@ function EditUser() {
               />
             </div>
             <div className="mb-5">
+            <label>RG</label>
               <input
                 type="text"
                 name="rg"
-                placeholder="Número do RG"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -172,10 +173,10 @@ function EditUser() {
               />
             </div>
             <div className="mb-5">
+            <label>Data Emissão do RG</label>
               <input
                 type="date"
                 name="data_emissao_rg"
-                placeholder="Data de emissão do RG"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -183,10 +184,10 @@ function EditUser() {
               />
             </div>
             <div className="mb-5">
+            <label>Orgão Emissor</label>
               <input
                 type="text"
                 name="orgao_emissor"
-                placeholder="Orgão emissor"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -198,10 +199,10 @@ function EditUser() {
             <h1 className="display-5">Número de celular</h1>
             <div className="dados-login-input">
               <div className="mt-5">
+              <label>Telefone</label>
                 <input
                   type="tel"
                   name="telefone"
-                  placeholder="Número de telefone"
                   className="input-config "
                   onChange={valorInput}
                   required
@@ -218,10 +219,10 @@ function EditUser() {
             </p>
             <div className="dados-login">
               <div className="mb-4">
+              <label>Email</label>
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email"
                   className="input-config"
                   onChange={valorInput}
                   required
@@ -230,10 +231,10 @@ function EditUser() {
                 />
               </div>
               <div className="mb-4">
+              <label>Senha</label>
                 <input
                   type="password"
                   name="senha"
-                  placeholder="Senha"
                   className="input-config"
                   onChange={valorInput}
                   required
