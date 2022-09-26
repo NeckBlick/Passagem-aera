@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header_dois from "../../components/Header_dois";
 import "./logado.css";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
+import { id } from "../Login";
 
 function Logado() {
+
+  const [user, setUser] = useState({
+    user:"",
+    email:"",
+    cpf:""
+  })
+  useEffect(() => {
+    const buscarCompra = async e => {
+      await fetch(`http://localhost/api/vizualizar.php?id=${id}`)
+      .then(response => response.json())
+      .then(data => setUser({
+        user:data.user,
+        email:data.email,
+        cpf:data.cpf
+      }))
+    }
+    buscarCompra()
+  }, [])
   return (
     <>
       <Header_dois />
@@ -23,9 +42,9 @@ function Logado() {
         </div>
 
         <div className="texto_main">
-          <p>Nome do usuário:</p>
-          <p>Email do usuário:</p>
-          <p>CPF do usuário:</p>
+          <p>Nome do usuário: {user.user}</p>
+          <p>Email do usuário: {user.email}</p>
+          <p>CPF do usuário: {user.cpf}</p>
         </div>
 
         <div className="botoes">
@@ -34,7 +53,7 @@ function Logado() {
               type="submit"
               className="btn btn-danger button d-flex align-items-center justify-content-center"
             >
-              <Link to="/logado">Compras</Link>
+              <Link to={"/carrinho/" + id} >Compras</Link>
             </button>
           </div>
           <div className="botao_editar">
@@ -42,12 +61,12 @@ function Logado() {
               type="submit"
               className="btn btn-danger button d-flex align-items-center justify-content-center"
             >
-              <Link to="/logado">Editar</Link>
+              <Link to={"/edituser/"+id}>Editar</Link>
             </button>
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

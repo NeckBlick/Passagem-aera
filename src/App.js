@@ -18,7 +18,7 @@ function App() {
                 <Route path="/cadastro" element={ <Cadastro/> }/>
                 <Route path="/login" element={ <Login/> }/>
                 <Route path="/logado" element={ <Logado/> }/>
-                <Route path="/carrinho" element={ <Carrinho/> }/>
+                <Route path="/carrinho/:id" element={ <Carrinho/> }/>
                 <Route path="/pagamento" element={ <Pagamento/> }/>
                 <Route path="/wp-admin" element={ <Admin/> }/>
                 <Route path="/edituser/:id" element={ <EditUser/> }/>              

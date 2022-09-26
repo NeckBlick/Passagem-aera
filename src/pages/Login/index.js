@@ -33,6 +33,7 @@ function Login() {
       return response.json();
     })
     .then((responseJson) => {
+      id = responseJson.id
       setUsuario({
         nome_usuario: responseJson.usuario,
         senha: responseJson.senha,
@@ -107,5 +108,5 @@ function Login() {
     </>
   );
 }
-
+export var id;
 export default Login;
