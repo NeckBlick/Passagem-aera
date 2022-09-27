@@ -42,7 +42,7 @@ function Cadastro() {
       })
       .then((responseJson) => {
         console.log(responseJson);
-        if (responseJson.erro) {
+        if (responseJson.error) {
           setStatus({
             type: "erro",
             mensagem:

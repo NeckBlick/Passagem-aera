@@ -23,7 +23,7 @@
         $orgao_emissor = $dados['usuario']['orgao_emissor'];
         $senha = $dados['usuario']['senha'];
         
-        $query_usuario = "INSERT INTO usuario (cpf,nome,nome_usuario,endereco_completo,telefone,email,endereco_comercial,data_nascimento,rg,data_emissao_rg,orgao_emissor,criado_em,senha,compra_id,voo_do_user) VALUES ('$cpf','$nome','$nome_usuario','$endereco_completo','$telefone','$email','$endereco_comercial','$data_nascimento','$rg','$data_emissao_rg','$orgao_emissor',NOW(),'$senha',2,1)";
+        $query_usuario = "INSERT INTO usuario (cpf,nome,nome_usuario,endereco_completo,telefone,email,endereco_comercial,data_nascimento,rg,data_emissao_rg,orgao_emissor,criado_em,senha,compra_id,voo_do_user) VALUES ('$cpf','$nome','$nome_usuario','$endereco_completo','$telefone','$email','$endereco_comercial','$data_nascimento','$rg','$data_emissao_rg','$orgao_emissor',NOW(),'$senha',1,1)";
         $cad_usuario = mysqli_query($conn, $query_usuario);
         
         if(mysqli_insert_id($conn)){

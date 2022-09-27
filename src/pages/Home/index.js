@@ -29,7 +29,7 @@ function Home() {
         <h1 className="display-5">Nenhum voo foi encontrado</h1>
       )
     }else{
-    setTable(<table>
+    setTable(<table className="w-100">
       <tr>
         <th className="fs-2 p-2 text-center bg-danger text-white">Companhia</th>
         <th className="fs-2 p-2 text-center bg-danger text-white">Dia do Voo</th>
@@ -65,76 +65,26 @@ function Home() {
 
         <div className="container dados-passagens ">
           <div className="conatiner cima-container align-items-center  d-flex p-2 mt-4">
-            <Form.Select
-              aria-label="Default select example"
-              className="idaevolta m-0"
-            >
-              <option>Ida e Volta</option>
-              <option value="1">Somente ida</option>
-            </Form.Select>
-
-            <Form.Select
-              aria-label="Default select example"
-              className="economico m-0 mx-3"
-            >
-              <option>econômica</option>
-              <option value="1">primeira classe</option>
-              <option value="2">executiva</option>
-            </Form.Select>
-
-            <Form.Select
-              aria-label="Default select example"
-              className="umpassageiro m-0"
-            >
-              <option>1 passageiro</option>
-              <option value="1">2 passageiros</option>
-              <option value="2">3 ou +</option>
-            </Form.Select>
-          </div>
-
-          <div className=" baixo-container mt-4 d-flex flex-direction-row align-itens-center p-2 flex-wrap">
-            <Form.Select
-              aria-label="Default select example"
-              title="Origem"
-              className="origem m-0"
-              placeholder="Origem"
-            >
-              <option value="0" disabled>
-                Origem
-              </option>
-              <option value="1">Fernando de Noronha</option>
-              <option value="2">Natal</option>
-              <option value="3">Salvador</option>
-              <option value="4">Rio de Janeiro</option>
-            </Form.Select>
-            <Form.Select
-              aria-label="Default select example"
-              title="Destino"
-              className="destino m-0"
-              placeholder="Destino"
-            >
-              <option value="0" disabled>
-                Destino
-              </option>
-              <option value="1">Natal</option>
-              <option value="2">Fernando de Noronha</option>
-              <option value="3">Rio de Janeiro</option>
-              <option value="4">Salvador</option>
-            </Form.Select>
-
-              <div className="botao_buscar ">
-                <Button variant="danger" className="botao_voos" onClick={exibirVoos}>
-                  Buscar
-                </Button>{" "}
+            <div className="row w-100 h-100">
+              <div className="col-12 col-sm-12 col-md-6">
+                <p className="fs-4">Clique aqui para buscar os voos disponíveis</p>
               </div>
+              <div className="col-12 col-sm-12 col-md-6 d-flex align-items-center justify-content-center">
+              <Button variant="danger" className="botao_voos" onClick={exibirVoos}>
+                  Buscar
+                </Button>
+              </div>
+            </div>
+
+              
           </div>
         </div>
       </div>
       
-      <div className="busca">
-        <div className="container busca p-1">
+        <div className="container-md buscar p-1 d-flex align-items-center justify-content-center">
           {table}
         </div>
+      <div className="busca">
       </div>
 
       <div className="inferior_baixo ">
