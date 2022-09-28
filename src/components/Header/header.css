@@ -15,6 +15,26 @@
   display: flex;
   align-items: center;
   text-align: center;
+
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+}
+.tres{
+  font-size: 40px;
+  color: #004aad;
+}
+.dois{
+  font-size: 40px;
+  color: #38b6ff;
+}
+.um{
+  font-size: 40px;
+  color: #9edbff;
+}
+.viagens{
+  color: #000;
 }
 .login-text{
   font-style: normal;
@@ -29,11 +49,12 @@
     background-size: cover;
 }
 .title{
-
+  margin-bottom: 1rem;
   color: #000;
 }
  a{
   text-decoration: none;
+
 }
 .links{
   display: flex;

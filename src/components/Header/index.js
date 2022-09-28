@@ -8,9 +8,14 @@ const Header = ({ rota, value }) => {
       <header className="header">
         <div className="container d-flex align-items-center justify-content-between">
           <Link to="/">
-            <h1 className="title">321 viagens</h1>
-          </Link>
+            <div className="logo">
+              <h1 className="tres">3</h1>
+              <h1 className="dois">2</h1>
+              <h1 className="um">1</h1>
+              <h1 className="viagens">viagens</h1>
+            </div>
 
+          </Link>
           <div className="links">
             <nav className="h-100 d-flex align-items-center">
               <div className="login">
