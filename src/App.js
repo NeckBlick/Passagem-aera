@@ -21,7 +21,7 @@ function App() {
                 <Route path="/carrinho/:id" element={ <Carrinho/> }/>
                 <Route path="/pagamento" element={ <Pagamento/> }/>
                 <Route path="/wp-admin" element={ <Admin/> }/>
-                <Route path="/edituser/:id" element={ <EditUser/> }/>              
+                <Route path="/edituser/:id" element={ <EditUser/> }/>           
             </Routes>
         </BrowserRouter>
 
