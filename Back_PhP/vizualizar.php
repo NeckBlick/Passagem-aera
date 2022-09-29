@@ -9,6 +9,7 @@
         $id = filter_input(INPUT_GET,'id', FILTER_SANITIZE_NUMBER_INT);
         
         $query_usuario = "SELECT * FROM usuario WHERE id=$id LIMIT 1";
+      
         $cad_usuario = mysqli_query($conn, $query_usuario);
         
         if(mysqli_num_rows($cad_usuario) > 0){

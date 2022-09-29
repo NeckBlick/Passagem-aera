@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./login.css";
-import Header from "../../components/Header";
+import Header_dois from "../../components/Header_dois";
 import { Link, Navigate } from "react-router-dom";
 
 function Login() {
@@ -55,7 +55,7 @@ function Login() {
   };
   return (
     <>
-      <Header value="Home" rota="/" />
+      <Header_dois/>
       <div className="container-fluid headerimg">
         <img src="assets/headerimg.png" alt="" className="headerimg"/>
       </div>

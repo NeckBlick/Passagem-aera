@@ -81,7 +81,7 @@ function Cadastro() {
         <form  className="container" onSubmit={cadUsuario}>
           <div className="primeiro-dados">
             <div className="mb-5">
-            <label>Nome</label>
+            <label>Nome*</label>
               <input  
                 type="text"
                 name="nome"
@@ -93,7 +93,7 @@ function Cadastro() {
               />
             </div>
             <div className="mb-5">
-            <label>Nome de usuário</label>
+            <label>Nome de usuário*</label>
               <input
                 type="text"
                 name="nome_usuario"
@@ -105,7 +105,7 @@ function Cadastro() {
               />
             </div>
             <div className="mb-5">
-            <label>Data de nascimento</label>
+            <label>Data de nascimento*</label>
               <input
                 type="date"
                 name="data_nascimento"
@@ -115,7 +115,7 @@ function Cadastro() {
               />
             </div>
             <div className="mb-5">
-            <label>Endereço completo</label>
+            <label>Endereço completo*</label>
               <input
                 type="text"
                 name="endereco_completo"
@@ -137,7 +137,7 @@ function Cadastro() {
               />
             </div>
             <div className="mb-5">
-            <label>CPF</label>
+            <label>CPF*</label>
               <input
                 type="text"
                 name="cpf"
@@ -145,11 +145,13 @@ function Cadastro() {
                 placeholder="123.456.789-10"
                 className="input-config"
                 onChange={valorInput}
+                maxLength="11"
+                minLength="11"
                 required
               />
             </div>
             <div className="mb-5">
-            <label>RG</label>
+            <label>RG*</label>
               <input
                 type="text"
                 name="rg"
@@ -157,11 +159,13 @@ function Cadastro() {
                 placeholder="12.345.789-1"
                 className="input-config"
                 onChange={valorInput}
+                maxLength='9'
+                minLength='9'
                 required
               />
             </div>
             <div className="mb-5">
-            <label>Data de emissão do RG</label>
+            <label>Data de emissão do RG*</label>
               <input
                 type="date"
                 name="data_emissao_rg"
@@ -171,7 +175,7 @@ function Cadastro() {
               />
             </div>
             <div className="mb-5">
-            <label>Orgão emissor</label>
+            <label>Orgão emissor*</label>
               <input
                 type="text"
                 name="orgao_emissor"
@@ -179,12 +183,14 @@ function Cadastro() {
                 placeholder="SP"
                 className="input-config"
                 onChange={valorInput}
+                maxLength='2'
+                minLength='2'
                 required
               />
             </div>
           </div>
           <div className="celular">
-            <h1 className="display-5">Número de celular</h1>
+            <h1 className="display-5">Número de celular*</h1>
             <div className="dados-login-input">
               <div className="mt-5">
               <label>Telefone</label>
@@ -195,6 +201,8 @@ function Cadastro() {
                   placeholder="11912345678"
                   className="input-config "
                   onChange={valorInput}
+                  maxLength='11'
+                  minLength='11'
                   required
                 />
               </div>
@@ -208,7 +216,7 @@ function Cadastro() {
             </p>
             <div className="dados-login">
               <div className="mb-4">
-              <label>Email</label>
+              <label>Email*</label>
                 <input
                   type="email"
                   name="email"
@@ -220,7 +228,7 @@ function Cadastro() {
                 />
               </div>
               <div className="mb-4">
-              <label>Senha</label>
+              <label>Senha*</label>
                 <input
                   type="password"
                   name="senha"
