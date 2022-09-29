@@ -22,7 +22,7 @@ function Pagamento() {
                 <InputGroup className="cartao1 mb-3">
                   <InputGroup.Text>Nome do titular </InputGroup.Text>
                   <Form.Control aria-label="Digite o nome "
-                  placeholder="Vitor Perrone" />
+                  placeholder="Nome e Sobrenome" />
                 </InputGroup>
               </div>
               <div className="conteudo">

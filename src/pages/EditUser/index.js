@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import Header from "../../components/Header";
+import Header_dois from "../../components/Header_dois";
 import './style.css'
 
 
@@ -87,10 +87,10 @@ function EditUser() {
        
         return (
     <>
-        <Header/>
+        <Header_dois/>
         <div className="container d-flex align-items-center justify-content-between mb-5 edit" >
           <h1 className="display-5">Editar Usuário</h1>
-          <Link to="/wp-admin" className="btn btn-danger">Vizualizar</Link>
+          <Link to="/wp-admin" className="btn btn-danger">Visualizar</Link>
         </div>
         <form  className="container" onSubmit={buscar}>
           <div className="primeiro-dados">

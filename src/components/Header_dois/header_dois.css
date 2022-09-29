@@ -9,6 +9,18 @@
       background-image: url(../../../public/assets/headerimg.png);
       background-size: cover;
   }
+  .logo {
+    position: relative;
+    bottom: 25px;
+  }
+  .login {
+    position: relative;
+    bottom: 15px;
+  }
+  .imagem_pessoa {
+    position: relative;
+    bottom: 15px;
+  }
   .title{
   
     color: #000;

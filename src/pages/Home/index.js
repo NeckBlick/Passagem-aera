@@ -12,7 +12,7 @@ function Home() {
   const [table, setTable] = useState();
   useEffect(() => {
     const buscarVoos = async (e) => {
-      await fetch("http://localhost/api/buscarvoos.php")
+      await fetch("http://localhost/VitorP_2dm/Back_PhP/buscarvoos.php")
         .then((response) => 
          response.json()
          )
