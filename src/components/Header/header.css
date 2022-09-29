@@ -17,9 +17,17 @@
   text-align: center;
 
 }
-.logo{
-  display: flex;
-  flex-direction: row;
+.logo {
+  position: relative;
+  bottom: 25px;
+}
+.login {
+  position: relative;
+  bottom: 15px;
+}
+.imagem_pessoa {
+  position: relative;
+  bottom: 15px;
 }
 .tres{
   font-size: 40px;

@@ -22,12 +22,8 @@ function App() {
                 <Route path="/carrinho/:id" element={ <Carrinho/> }/>
                 <Route path="/pagamento" element={ <Pagamento/> }/>
                 <Route path="/wp-admin" element={ <Admin/> }/>
-<<<<<<< HEAD
                 <Route path="/edituser/:id" element={ <EditUser/> }/>              
                 <Route path="/assento" element={ <Assento/> }/>              
-=======
-                <Route path="/edituser/:id" element={ <EditUser/> }/>           
->>>>>>> 54069b1940aa2d3e70d6268428974ff091f9d222
             </Routes>
         </BrowserRouter>
 

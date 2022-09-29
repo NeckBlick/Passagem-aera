@@ -56,6 +56,7 @@ function Cadastro() {
         }
       });
       
+      
   };
   return (
     <>
@@ -85,6 +86,8 @@ function Cadastro() {
                 type="text"
                 name="nome"
                 className="input-config"
+                placeholder="Nome completo"
+                pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
                 onChange={valorInput}
                 required
               />
@@ -94,7 +97,8 @@ function Cadastro() {
               <input
                 type="text"
                 name="nome_usuario"
-                
+                placeholder="Nome de usuário"
+                pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -105,7 +109,6 @@ function Cadastro() {
               <input
                 type="date"
                 name="data_nascimento"
-                
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -116,7 +119,7 @@ function Cadastro() {
               <input
                 type="text"
                 name="endereco_completo"
-               
+                placeholder="Rua amarela, 123."
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -127,7 +130,7 @@ function Cadastro() {
               <input
                 type="text"
                 name="endereco_comercial"
-                
+                placeholder="Avenida europa, 321"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -138,6 +141,8 @@ function Cadastro() {
               <input
                 type="text"
                 name="cpf"
+                pattern="[0-9]+$" 
+                placeholder="123.456.789-10"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -148,6 +153,8 @@ function Cadastro() {
               <input
                 type="text"
                 name="rg"
+                pattern="[0-9]+$" 
+                placeholder="12.345.789-1"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -168,6 +175,8 @@ function Cadastro() {
               <input
                 type="text"
                 name="orgao_emissor"
+                pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+                placeholder="SP"
                 className="input-config"
                 onChange={valorInput}
                 required
@@ -182,6 +191,8 @@ function Cadastro() {
                 <input
                   type="tel"
                   name="telefone"
+                  pattern="[0-9]+$" 
+                  placeholder="11912345678"
                   className="input-config "
                   onChange={valorInput}
                   required
@@ -201,6 +212,7 @@ function Cadastro() {
                 <input
                   type="email"
                   name="email"
+                  placeholder="user@email.com"
                   className="input-config"
                   onChange={valorInput}
                   required
@@ -212,6 +224,7 @@ function Cadastro() {
                 <input
                   type="password"
                   name="senha"
+                  placeholder="Senha123"
                   className="input-config"
                   onChange={valorInput}
                   required
