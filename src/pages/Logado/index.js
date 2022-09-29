@@ -53,7 +53,7 @@ function Logado() {
               type="submit"
               className="btn btn-danger button d-flex align-items-center justify-content-center"
             >
-              <Link to={"/carrinho/" + id} >Compras</Link>
+              <Link to={"/carrinho"} >Compras</Link>
             </button>
           </div>
           <div className="botao_editar">

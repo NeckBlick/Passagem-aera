@@ -43,7 +43,7 @@ function Home() {
             <td className="fs-4 text-center p-2">{voo.diavoo}</td>
             <td className="fs-4 text-center p-2">{voo.destino}</td>
             <td className="fs-4 text-center p-2">R${voo.preco}</td>
-            <td className="fs-4 text-center p-2 bg-danger "><Link to="/pagamento" className="bg-danger w-100 h-100 text-white">Comprar</Link></td>
+            <td className="fs-4 text-center p-2 bg-danger "><Link to="/assento" className="bg-danger w-100 h-100 text-white">Comprar</Link></td>
           </tr>
         );
       })}

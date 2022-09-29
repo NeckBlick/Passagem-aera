@@ -11,14 +11,23 @@
 }
 
 .aviao_imagem {
-  width: 100vw;
-
+  width: 80vw;
+}
+@media (max-width: 510px) {
+  .aviao_imagem {
+    display: none;
+  }
+  .dados-passagens {
+    position: relative;
+    top: 8px;
+    height: 325px !important;
+  }
 }
 
 /* dados das passagens */
 .dados-passagens {
   display: flex;
-  width: 1250px;
+  width: 70vw;
   height: 210px;
   position: relative;
   z-index: 99999;
@@ -31,131 +40,23 @@
   border: 1px solid #eaeaea;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  flex-direction: column;}
-/* }
-.idaevolta {
-  width: 145px;
-  height: 40px;
-  margin-top: 50px;
-  margin-left: 30px;
+  flex-direction: column;
 }
-.economico {
-  width: 145px;
-  height: 40px;
-  margin-top: 50px;
-  margin-left: 30px;
-}
-.umpassageiro {
-    width: 158px;
-    height: 40px;
-    margin-top: 50px;
-    margin-left: 30px;
-}
-.origem {
-    width: 244px;
-    height: 43px;
-    margin-left: 2rem;
-}
-
-@media (max-width: 1399px) {
-    .origem {
-        margin-left: 0;
-    }
-    .dados-passagens {
-        height: 230px;
-        width: 70%;
-    }
-}
-@media (max-width: 1120px) {
-  .dados-passagens {
-    width: 100%;
-    right: 30px;
-  }
-}
-@media (max-width: 780px) {
-  .origem {
-    margin-left: 0;
-  }
-  .data_viagem {
-    margin-top: 1rem;
-    flex-wrap: wrap;
-  }
-  .dados-passagens {
-    height: 290px;
-  }
-  .botao_voos {
-    flex-wrap: wrap;
-    justify-content: start;
-    margin-top: 1rem;
-    right: 49px;
-    position: relative;
-  }
-}
-
-@media (max-width: 575px) {
-  .dados-passagens {
-    display: flex;
-    height: 450px;
-    margin-left: 2rem;
-  }
-
-  .cima-container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .baixo-container{
-    position: relative;
-    left: 20px;
-  }
-}
-
-.destino {
-  width: 244px;
-  height: 43px;
-  position: relative;
-  left: 1%;
-}
-
-.data_viagem {
-    display: flex;
-}
-
-
-.select {
-  display: flex;
-  flex-direction: row;
-}
-.label {
-  display: flex;
-  flex-direction: row;
-}
-.label .ida {
-  width: 130px;
-}
-.label .volta {
-  width: 130px;
-}
-.ida .volta {
-  width: 50px;
-} */
-
 
 .botao_voos {
   background-color: #cf0c12;
   width: 100px;
-
 }
 .botao_voos:hover {
   background-color: #7b0408;
 }
 
-@media(max-width:770px){
-  .dados-passagens{
+@media (max-width: 770px) {
+  .dados-passagens {
     height: 300px;
   }
 }
-.buscar{
+.buscar {
   overflow-x: auto;
 }
 
@@ -234,13 +135,12 @@
   padding: 0.6rem;
 }
 
-
-.busca tr td{
+.busca tr td {
   border-bottom: 1px solid #000000;
 }
-.busca tr th:nth-last-child(4){
+.busca tr th:nth-last-child(4) {
   border-radius: 10px 0 0 0px;
 }
-.busca tr th:nth-last-child(1){
+.busca tr th:nth-last-child(1) {
   border-radius: 0px 10px 0px 0px;
 }
