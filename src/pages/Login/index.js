@@ -28,7 +28,7 @@ function Login() {
         },
         body: JSON.stringify({ usuario }),
     }
-    await fetch("http://localhost/api/login.php", settins)
+    await fetch("https://123milhas-passagens.000webhostapp.com/login.php", settins)
     .then((response) => {
       return response.json();
     })

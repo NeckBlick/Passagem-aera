@@ -34,7 +34,7 @@
         }else{
             $response = [
                 "error" => true,
-                "mensagem" => "Nenhum voo encontrado"
+                "mensagem" => "Nenhum usuário encontrado"
             ];
         }
 http_response_code(200);
