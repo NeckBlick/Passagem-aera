@@ -111,4 +111,15 @@ Abra [http://localhost:3000](http://localhost:3000) para vizualizar no navegador
 
 ---
 
+## Links
+  - Repositório: https://github.com/NeckBlick/Passagem-aera
+
+  ## Autores
+
+  * **Nicolas Gomes** 
+  * **Lucas Pereira**
+  * **João Francisco**
+  * **Miguel Soares**
+  * **Vitor Perrone**
+
 Feito com ♥ by 321viagens :wave:
